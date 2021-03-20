@@ -2,6 +2,7 @@ const express = require('express');
 const exphbs = require('express-handlebars')
 const Handlebars = require('handlebars');
 const path = require('path');
+const methodOverride = require('method-override')
 // const morgan = require('morgan')
 
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
@@ -26,6 +27,8 @@ app.set('view engine', '.hbs');
 // app.use(morgan())
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
+app.use(methodOverride('_method'))
+
 //Global Variables
 
 //routes

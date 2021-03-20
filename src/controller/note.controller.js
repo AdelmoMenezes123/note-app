@@ -22,12 +22,15 @@ noteCrlt.renderNote = async (req, res) => {
 
 }
 
-noteCrlt.renderEditForm = (req, res) => {
-    res.send('render note edite.');
+noteCrlt.renderEditForm = async (req, res) => {
+    const note = await Note.findById(req.params.id)
+    res.render('notes/edite-note', { note })
 }
 
-noteCrlt.updateNote = (req, res) => {
-    res.send('render note update.');
+noteCrlt.updateNote = async (req, res) => {
+    const { title, description } = req.body;
+    await Note.findByIdAndUpdate(req.params.id, { title, description })
+    res.redirect('/notes/all-notes')
 }
 
 noteCrlt.deleteNote = async (req, res) => {

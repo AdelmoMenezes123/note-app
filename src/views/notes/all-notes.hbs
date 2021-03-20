@@ -1,21 +1,20 @@
-<div class="row">
+<div class="row py-4">
     {{#each notes}}
-    <div class="col-md-3">
-        <div class="card back-1 text-center">
+    <div class="px350">
+        <div class="card back-1 text-center mt-5">
             <div class="d-flex justify-content-center">
-                <h4 class="mg-5 up-case">{{title}}
-                    <a class="mg-3" href="/notes/edit/{{_id}}">
-                        <i class="fa fa-edit"></i>
-                    </a>
-                </h4>
+                <h4 class="up-case">{{title}}</h4>
+                <a class="position-top" href="/notes/edit/{{_id}}">
+                    <i class="fa fa-edit"></i>
+                </a>
             </div>
             <div class="card-body back-2">
                 <p>
                     {{description}}
                 </p>
                 <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
-                <input type="hidden" name="_method" value="DELETE">
-                <button id="delete" type="submit" class="btn btn-block ">Delete</button>
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button id="delete" type="submit" class="btn btn-block ">Delete</button>
                 </form>
             </div>
         </div>

@@ -42,7 +42,6 @@ body {
     height: 90vh;
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
@@ -210,6 +209,21 @@ h1 span {
 
 /* ------------ main------------------------ */
 
+main{
+    position: absolute;
+    top: 0;
+   
+   /* display: flex;
+   justify-content: center;
+   align-items: center; */
+}
+
+.jumbotron{
+    padding: 20px;
+
+    margin: 5vh 0;
+}
+
 .container {
     background-color: var(--title);
     color: var(--background);
@@ -258,10 +272,31 @@ h1 span {
 }
 
 .d-flex>h4 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
+    padding: 20px;
 }
 
 .card-body>p {
     font-size: 1.4rem;
+}
+
+.position-top{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+}
+
+.px350{
+    width: 17rem;
+    padding: 20px;
+    box-sizing: content-box;
+}
+
+@media(max-width:425px){
+    .px350{
+        width: 100%;
+        box-sizing: border-box;
+    }
 }

@@ -1,12 +1,18 @@
 const noteCrlt = {};
 
+const Note = require('../models/Note');
+
 noteCrlt.renderNoteForm = (req, res) => {
     res.render('notes/new-note');
 }
 
-noteCrlt.createNewNote = (req, res) => {
-    console.log(req.body)
-    res.send('new note add.');
+noteCrlt.createNewNote = async (req, res) => {
+    const { title, description } = req.body
+    const newNote = new Note({ title, description })
+    
+    await newNote.save().then(sucess=>{
+        res.send('new note add.');
+    }).catch(err=>console.log(err))
 }
 
 noteCrlt.renderNote = (req, res) => {

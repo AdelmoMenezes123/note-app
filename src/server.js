@@ -19,7 +19,7 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 
 //Middlewares
-app.use(morgan())
+// app.use(morgan())
 app.use(express.urlencoded({extended:false}))
 //Global Variables
 

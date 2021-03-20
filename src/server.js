@@ -17,16 +17,13 @@ app.engine('.hbs', exphbs({
 }));
 app.set('view engine', '.hbs');
 
-console.log(app.get('views'));
-
 //Middlewares
 
 //Global Variables
 
 //routes
-app.get('/', (req, res) => {
-     return res.render('index')
-})
+app.use(require('./routes/index.routes'));
+app.use(require('./routes/notes.routes'));
 
 //static files
 app.use(express.static(path.join(__dirname, 'public')));

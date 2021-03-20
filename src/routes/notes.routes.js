@@ -15,7 +15,7 @@ router.get('/notes/add', renderNoteForm);
 router.post('/notes/new-note', createNewNote);
 
 // get All notes
-router.get('/notes', renderNote)
+router.get('/notes/all-notes', renderNote)
 
 //editar notes
 router.get('/notes/edit/:id', renderEditForm)

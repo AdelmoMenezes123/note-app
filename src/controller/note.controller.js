@@ -9,14 +9,17 @@ noteCrlt.renderNoteForm = (req, res) => {
 noteCrlt.createNewNote = async (req, res) => {
     const { title, description } = req.body
     const newNote = new Note({ title, description })
-    
-    await newNote.save().then(sucess=>{
+
+    await newNote.save().then(sucess => {
         res.send('new note add.');
-    }).catch(err=>console.log(err))
+    }).catch(err => console.log(err))
 }
 
-noteCrlt.renderNote = (req, res) => {
-    res.send('render note.');
+noteCrlt.renderNote = async (req, res) => {
+    await Note.find({}).then(notes => {
+        res.render('notes/all-notes', { notes });
+    }).catch(err => console.log(err));
+
 }
 
 noteCrlt.renderEditForm = (req, res) => {

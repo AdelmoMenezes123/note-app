@@ -1,42 +1,47 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 mx-auto">
-            <div class="card">
-                <div class="card-header">
-                    Account Register
-                </div>
-                <div class="card-body">
-                    <form action="/users/signup" method="POST">
-                        <div class="form-floating mb-3">
-                            <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Name"
-                                required>
-                            <label for="floatingInput">Name</label>
-                        </div>
+<div class="section">
+    <section id="section-foto">
+        <img src="/note_bg.png" alt="foto login">
+    </section>
+    <section id="section-info">
+        <div class="row">
+            <div class="mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="text-center">Account Register</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="/users/signup" method="POST">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="name" class="form-control" id="floatingInput"
+                                    placeholder="Name" required>
+                                <label for="floatingInput">Name</label>
+                            </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Email"
-                                required>
-                            <label for="floatingInput">Email</label>
-                        </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" name="email" class="form-control" id="floatingInput"
+                                    placeholder="Email" required>
+                                <label for="floatingInput">Email</label>
+                            </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="password" name="password" class="form-control" id="floatingInput"
-                                placeholder="Password" required>
-                            <label for="floatingInput">Password</label>
-                        </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" name="password" class="form-control" id="floatingInput"
+                                    placeholder="Password" required>
+                                <label for="floatingInput">Password</label>
+                            </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="password" name="confirm_password" class="form-control" id="floatingInput"
-                                placeholder="Confirm Password" required>
-                            <label for="floatingInput">Confirm Password</label>
-                        </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" name="confirm_password" class="form-control" id="floatingInput"
+                                    placeholder="Confirm Password" required>
+                                <label for="floatingInput">Confirm Password</label>
+                            </div>
 
-                        <div class="form-group">
-                            <button class="btn btn-green btn-block">Signup</button>
-                        </div>
-                    </form>
+                            <div class="form-group">
+                                <button class="btn btn-green btn-block">Signup</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>

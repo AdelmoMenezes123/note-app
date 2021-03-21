@@ -211,7 +211,7 @@ h1 span {
 
 main {
     position: absolute;
-     /* top: 0; */
+    /* top: 0; */
     bottom: 0;
 }
 
@@ -304,4 +304,35 @@ main {
         width: 100%;
         box-sizing: border-box;
     }
+}
+
+/* ---------------LOGIN---------------- */
+
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 17vh;
+}
+
+#section-foto{
+    width: 50%;
+    margin-top: 2vh;
+    margin-bottom: 0;
+}
+
+#section-foto > img{
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#section-info{
+    flex: 1;
+}
+
+@media(max-width: 780px){
+    #section-foto{
+        display: none;
+    }  
 }

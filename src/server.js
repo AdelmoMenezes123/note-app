@@ -3,6 +3,9 @@ const exphbs = require('express-handlebars')
 const Handlebars = require('handlebars');
 const path = require('path');
 const methodOverride = require('method-override')
+const flash = require('connect-flash')
+const session = require('express-session')
+
 // const morgan = require('morgan')
 
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
@@ -28,8 +31,20 @@ app.set('view engine', '.hbs');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 app.use(methodOverride('_method'))
+app.use(session({
+     secret:'secret',
+     resave:true,
+     saveUninitialized: true
+
+}));
+app.use(flash());
 
 //Global Variables
+
+app.use((req,res, next)=>{
+    res.locals.success_msg = req.flash('success_msg');
+     next();
+})
 
 //routes
 app.use(require('./routes/index.routes'));

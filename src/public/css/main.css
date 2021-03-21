@@ -211,22 +211,24 @@ h1 span {
 
 main{
     position: absolute;
-    top: 0;
-   
+    /* top: 0; */
+    /* bottom: 7rem; */
+   top: 5rem;
+   bottom:5rem;
+
    /* display: flex;
    justify-content: center;
    align-items: center; */
 }
 
 .jumbotron{
-    padding: 20px;
-
     margin: 5vh 0;
 }
 
 .container {
     background-color: var(--title);
     color: var(--background);
+    height: max-content;
 }
 
 .card {

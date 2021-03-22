@@ -1,4 +1,4 @@
-<div class="col-md-4 mx-auto py-4">
+<div class="mx-auto py-4" id="form">
     <div class="card mt-5">
         <div class="card-header">
             <h3>Edit Note</h3>
@@ -11,9 +11,7 @@
                     <label for="floatingInput">Title</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <textarea name="description" class="form-control textarea"  required>
-                        {{note.description}}
-                    </textarea>
+                    <textarea name="description" class="form-control textarea"z rows="10"  required>{{note.description}}</textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-green btn-block">Save</button>

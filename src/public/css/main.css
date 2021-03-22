@@ -4,11 +4,11 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    transition: 0.5s all;
-
 }
 
-
+button:hover,.btn:hover{
+    transition: 0.2s all;
+}
 
 :root {
     --white: #fff;
@@ -18,7 +18,7 @@
     --text-highlight: #B3B9FF;
     --title: #2E384D;
     --red: #E83F5B;
-    --green: #4CD62B;
+    --green: #51bdb2;
     --blue: #5965E0;
     --blue-dark: #4953B8;
     --blue-twitter: #2AA9E0;
@@ -38,11 +38,13 @@
 
 body {
     background-color: var(--background);
-    /* color: var(--background); */
     height: 90vh;
 
     display: flex;
     justify-content: center;
+
+    height: 100%;
+    overflow-y: auto;
 }
 
 body,
@@ -114,7 +116,7 @@ h1 span {
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: #4070f4;
+    background-color:var(--blue);
     top: 0;
     left: 0;
     display: none
@@ -123,7 +125,9 @@ h1 span {
 .menu ul {
     text-align: center;
     width: 100%;
-    float: left
+    float: left;
+    padding: 0;
+    /* margin-top: 6vh; */
 }
 
 .menu li {
@@ -168,12 +172,13 @@ h1 span {
     }
 
     header {
-        background-color: #fff;
+        background-color:  var(--background);
         box-shadow: 0 0 3px rgba(44, 44, 44, .267);
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 999
+        z-index: 999;
+        border-bottom: 0;
     }
 
     .menu {
@@ -181,7 +186,7 @@ h1 span {
         height: 56px;
         line-height: 56px;
         float: right;
-        background-color: #fff;
+        background-color:  var(--background);
         display: block !important;
         position: static
     }
@@ -211,25 +216,37 @@ h1 span {
 
 main {
     position: absolute;
-    /* top: 0; */
     bottom: 0;
+    position: fixed;
+
+    background-color: var(--blue);
+    height: 100%;
+}
+.card-body,.card-body>p {
+    font-size: 1.2rem;
+    background-color: var(--background);
+    color: var(--title);
+    
+    border-radius: 15px;
+    padding: 20px;
 }
 
+
 .container {
-    background-color: var(--title);
     color: var(--background);
-    height: max-content;
 
     display: flex;
     flex-direction: column;
 
     justify-content: center;
 
-    height: 100%;
+    min-height: 100%;
 }
 
 .card {
     background: none;
+    box-shadow: 6px 5px 14px var(--blue-dark);
+    border-radius: 15px;
 }
 
 .btn-green {
@@ -239,7 +256,7 @@ main {
 }
 
 .btn-green:hover {
-    background-color: #31b113;
+    background-color: #2e9b90;
     color: var(--title);
 }
 
@@ -282,10 +299,6 @@ main {
     padding: 20px;
 }
 
-.card-body>p {
-    font-size: 1.4rem;
-}
-
 .position-top {
     position: absolute;
     top: 0;
@@ -295,6 +308,7 @@ main {
 
 .px350 {
     width: 17rem;
+    height: 100%;
     padding: 20px;
     box-sizing: content-box;
 }
@@ -310,16 +324,16 @@ main {
 
 .section{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 
     margin-top: 17vh;
 }
 
 #section-foto{
-    width: 50%;
-    margin-top: 2vh;
     margin-bottom: 0;
+    /* margin-right: 10vw; */
+    width: 35vw;
 }
 
 #section-foto > img{
@@ -328,11 +342,103 @@ main {
 }
 
 #section-info{
-    flex: 1;
+    margin-right: 3vw;
+    width: 35vw;
 }
 
 @media(max-width: 780px){
     #section-foto{
         display: none;
-    }  
+    }
+
+    #section-info{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+button,.btn{
+    /* transform: scale(0.9); */
+    transition: all .5s ease;
+    color: var(--background);
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
+button,.btn:hover{
+    transform: scale(1);
+    transition: all .5s ease;
+    color: var(--background);
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
+/* ------------------------------- home -------------------- */
+
+#home {
+    width: 700px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#home .btn{
+    border-radius: 9px;
+}
+
+@media(max-width: 768px){
+    #home {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    main{
+        height: 100%;
+    }
+
+    #home p{
+        text-align: center;
+    }
+}
+
+@media(max-width: 400px){
+    #home{
+        overflow: auto;
+        margin-top: 10vh;
+    }
+
+    main,main.container{
+        height: 100%;
+    }
+
+    ::-webkit-scrollbar{
+        visibility: hidden;
+    }
+}
+
+#flex-3coluns{
+    gap: 20px;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+::-webkit-scrollbar{
+    visibility: hidden;
+}
+
+#items{
+    width: 350px;
+}
+
+#form{
+    width: 450px;
+}
+
+@media(max-width:576px){
+    #items,#form{
+        width: 100%;
+    }
 }

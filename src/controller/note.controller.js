@@ -25,25 +25,11 @@ noteCrlt.renderNote = async (req, res) => {
     const filmes = await Note.find({ "categoria": "filmes" })
     const series = await Note.find({ "categoria": "series" })
     const animes = await Note.find({ "categoria": "animes" })
-    const desenhos = await Note.find({ "categoria": "desenhos" })
+    const animacoes = await Note.find({ "categoria": "animacoes" })
 
     // const notes = await Note.find()
-    const array = []
 
-    await array.push(
-        { "hqs": hqs },
-        { "mangas": mangas },
-        { "livros": livros },
-        { "filmes": filmes },
-        { "series": series },
-        { "animes": animes },
-        { "desenhos": desenhos },
-    );
-
-
-    array.forEach(categorias => {
-        res.render('notes/all-notes', { categorias });
-    })
+    res.render('notes/all-notes', { hqs, mangas, livros, filmes, series, animes, animacoes });
 }
 
 noteCrlt.renderEditForm = async (req, res) => {

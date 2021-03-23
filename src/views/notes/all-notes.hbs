@@ -1,19 +1,9 @@
-{{#each array}}
-<div class="card my-5">
-    <pre>{{this.hqs}}</pre>
-</div>
-{{/each}}
-
-
-
-
 <div class="card mb-4">
     <h1 class="text-center">HQ's</h1>
     <div class="py-4" id="flex-3coluns">
-        {{!-- {{#each array}} --}}
-        {{!-- <pre>{{this.hqs}}</pre> --}}
-        {{!-- <div id="items"> --}}
-            {{!-- <div class="card back-1 text-center ">
+        {{#each hqs}}
+        <div id="items">
+            <div class="card back-1 text-center ">
                 <div class="d-flex justify-content-center">
                     <h4 class="up-case mt-3 mb-0">{{title}}</h4>
                     <a class="position-top" href="/notes/edit/{{_id}}">
@@ -30,7 +20,169 @@
                     </form>
                 </div>
             </div>
-        </div> --}}
-        {{!-- {{/each}} --}}
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div class="card mb-4">
+    <h1 class="text-center">Livros</h1>
+    <div class="py-4" id="flex-3coluns">
+        {{#each livros}}
+        <div id="items">
+            <div class="card back-1 text-center ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="up-case mt-3 mb-0">{{title}}</h4>
+                    <a class="position-top" href="/notes/edit/{{_id}}">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </div>
+                <div class="card-body back-2">
+                    <p>
+                        {{description}}
+                    </p>
+                    <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button id="delete" type="submit" class="btn btn-block ">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div class="card mb-4">
+    <h1 class="text-center">Mangas</h1>
+    <div class="py-4" id="flex-3coluns">
+        {{#each mangas}}
+        <div id="items">
+            <div class="card back-1 text-center ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="up-case mt-3 mb-0">{{title}}</h4>
+                    <a class="position-top" href="/notes/edit/{{_id}}">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </div>
+                <div class="card-body back-2">
+                    <p>
+                        {{description}}
+                    </p>
+                    <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button id="delete" type="submit" class="btn btn-block ">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div class="card mb-4">
+    <h1 class="text-center">Filmes</h1>
+    <div class="py-4" id="flex-3coluns">
+        {{#each filmes}}
+        <div id="items">
+            <div class="card back-1 text-center ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="up-case mt-3 mb-0">{{title}}</h4>
+                    <a class="position-top" href="/notes/edit/{{_id}}">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </div>
+                <div class="card-body back-2">
+                    <p>
+                        {{description}}
+                    </p>
+                    <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button id="delete" type="submit" class="btn btn-block ">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div class="card mb-4">
+    <h1 class="text-center">Series</h1>
+    <div class="py-4" id="flex-3coluns">
+        {{#each series}}
+        <div id="items">
+            <div class="card back-1 text-center ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="up-case mt-3 mb-0">{{title}}</h4>
+                    <a class="position-top" href="/notes/edit/{{_id}}">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </div>
+                <div class="card-body back-2">
+                    <p>
+                        {{description}}
+                    </p>
+                    <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button id="delete" type="submit" class="btn btn-block ">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div class="card mb-4">
+    <h1 class="text-center">Animes</h1>
+    <div class="py-4" id="flex-3coluns">
+        {{#each animes}}
+        <div id="items">
+            <div class="card back-1 text-center ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="up-case mt-3 mb-0">{{title}}</h4>
+                    <a class="position-top" href="/notes/edit/{{_id}}">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </div>
+                <div class="card-body back-2">
+                    <p>
+                        {{description}}
+                    </p>
+                    <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button id="delete" type="submit" class="btn btn-block ">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div class="card mb-4">
+    <h1 class="text-center">Animações</h1>
+    <div class="py-4" id="flex-3coluns">
+        {{#each animacoes}}
+        <div id="items">
+            <div class="card back-1 text-center ">
+                <div class="d-flex justify-content-center">
+                    <h4 class="up-case mt-3 mb-0">{{title}}</h4>
+                    <a class="position-top" href="/notes/edit/{{_id}}">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </div>
+                <div class="card-body back-2">
+                    <p>
+                        {{description}}
+                    </p>
+                    <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button id="delete" type="submit" class="btn btn-block ">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{/each}}
     </div>
 </div>

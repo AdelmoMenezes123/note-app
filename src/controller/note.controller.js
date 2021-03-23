@@ -7,24 +7,43 @@ noteCrlt.renderNoteForm = (req, res) => {
 }
 
 noteCrlt.createNewNote = async (req, res) => {
-    const { title, description } = req.body;
-    const newNote = new Note({ title, description })
+    const { title, description, categoria } = req.body;
+    const newNote = new Note({ title, description, categoria })
 
     req.flash('success_msg', 'Note Added Successfully')
 
-    await newNote.save().then(sucess => {
+    await newNote.save().then(success => {
         res.redirect('/notes/all-notes')
     }).catch(err => console.log(err))
 }
 
 noteCrlt.renderNote = async (req, res) => {
 
-    await Note.find({}).then(notes => {
+    const hqs = await Note.find({ "categoria": "hqs" })
+    const mangas = await Note.find({ "categoria": "mangas" })
+    const livros = await Note.find({ "categoria": "livros" })
+    const filmes = await Note.find({ "categoria": "filmes" })
+    const series = await Note.find({ "categoria": "series" })
+    const animes = await Note.find({ "categoria": "animes" })
+    const desenhos = await Note.find({ "categoria": "desenhos" })
 
-        res.render('notes/all-notes', {notes});
+    // const notes = await Note.find()
+    const array = []
 
-    }).catch(err => console.log(err));
+    await array.push(
+        { "hqs": hqs },
+        { "mangas": mangas },
+        { "livros": livros },
+        { "filmes": filmes },
+        { "series": series },
+        { "animes": animes },
+        { "desenhos": desenhos },
+    );
 
+
+    array.forEach(categorias => {
+        res.render('notes/all-notes', { categorias });
+    })
 }
 
 noteCrlt.renderEditForm = async (req, res) => {

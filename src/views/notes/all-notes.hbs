@@ -1,10 +1,12 @@
-<div class="container">
+{{!-- {{#each categoria}} --}}
+<div class="card mb-4">
+    <h1 class="text-center">HQ's</h1>
     <div class="py-4" id="flex-3coluns">
         {{#each notes}}
-        <div id="items" id="items" >
+        <div id="items">
             <div class="card back-1 text-center ">
                 <div class="d-flex justify-content-center">
-                    <h4 class="up-case">{{title}}</h4>
+                    <h4 class="up-case mt-3 mb-0">{{title}}</h4>
                     <a class="position-top" href="/notes/edit/{{_id}}">
                         <i class="fa fa-edit"></i>
                     </a>
@@ -23,3 +25,4 @@
         {{/each}}
     </div>
 </div>
+{{!-- {{#each categoria}} --}}

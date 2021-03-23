@@ -1,4 +1,4 @@
-<div class="col-md-4 col-sm-12 col-lx-6 mx-auto py-5">
+<div class="mx-auto" id="form">
     <div class="card text-center mt-5">
         <div class="card-header">
             <h3>New Note</h3>
@@ -6,11 +6,27 @@
         <div class="card-body">
             <form action="/notes/new-note" method="POST">
                 <div class="form-floating mb-3">
-                    <input type="text" name="title" class="form-control" id="floatingInput" placeholder="Title" required>
+                    <input type="text" name="title" maxlength="50" class="form-control" id="floatingInput" placeholder="Title"
+                        required>
                     <label for="floatingInput">Title</label>
                 </div>
+
+                <div class="form-group mb-3">
+                    <select class="form-control p-3" name="categoria">
+                        <option value=""> > Selecione a categoria < </option>
+                        <option value="hqs">HQ's</option>
+                        <option value="mangas">Mangás</option>
+                        <option value="livros">Livros</option>
+                        <option value="filmes">Filmes</option>
+                        <option value="series">Series</option>
+                        <option value="anime">Animes</option>
+                        <option value="desenhos">Desenhos</option>
+                    </select>
+                </div>
+
                 <div class="form-floating mb-3">
-                    <textarea name="description" class="form-control textarea" placeholder="Description" required></textarea>
+                    <textarea name="description" class="form-control textarea" 
+                    placeholder="Description" maxlength="80" required></textarea>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-green btn-block">Save</button>

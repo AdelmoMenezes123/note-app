@@ -18,8 +18,11 @@ noteCrlt.createNewNote = async (req, res) => {
 }
 
 noteCrlt.renderNote = async (req, res) => {
+
     await Note.find({}).then(notes => {
-        res.render('notes/all-notes', { notes });
+
+        res.render('notes/all-notes', {notes});
+
     }).catch(err => console.log(err));
 
 }

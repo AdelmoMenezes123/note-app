@@ -291,15 +291,24 @@ main {
 #delete {
     background-color: var(--red);
     color: var(--white);
-    width: 100%;
+
+    position: absolute;
+    bottom: 2vh;
+    left: 10vh;
 }
 
-.d-flex>h4 {
+#edite{
+    position: absolute;
+    bottom: 2vh;
+    right: 10vh;
+}
+
+.d-flex > h4 {
     font-size: 1.3rem;
     font-weight: 600;
     padding: 20px;
     height: 13vh;
-    overflow-wrap
+    overflow-wrap: anywhere;
 }
 
 .position-top {
@@ -436,7 +445,8 @@ button,
 }
 
 #items {
-    width: 310px;
+    width: 250px;
+    transition: all .8s ease;
 }
 
 #form {
@@ -449,11 +459,4 @@ button,
     #form {
         width: 100%;
     }
-}
-
-#delete{
-    position: absolute;
-    bottom: 2vh;
-    right: 0;
-    left: 0;
 }

@@ -35,6 +35,7 @@ noteCrlt.renderEditForm = async (req, res) => {
     const note = await Note.findById(req.params.id)
 
     if(note.user != req.user.id){
+        req.flash('error_msg', 'Not Authorizad')
         return res.redirect('/notes/all-notes')
     }
 

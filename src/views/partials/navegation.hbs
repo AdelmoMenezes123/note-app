@@ -9,12 +9,15 @@
     <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
+
         {{#if user}}
-            <li><a href="/notes/add">Add Note</a></li>
-            <li><a href="/notes/all-notes">All Notes</a></li>
-        {{/if}}
+        <li><a href="/notes/add">Add Note</a></li>
+        <li><a href="/notes/all-notes">All Notes</a></li>
+        <li><a href="/users/logout">Logout</a></li>
+        {{else}}
         <li><a href="/users/signin">Login</a></li>
         <li><a href="/users/signup">Register</a></li>
+        {{/if}}
         <!--Dark Mode-->
         {{!-- <li class="da">
                     <button class="dark-button"><i class="fa fa-moon-o"></i> </button>

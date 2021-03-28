@@ -5,7 +5,7 @@ const path = require('path');
 const methodOverride = require('method-override')
 const flash = require('connect-flash')
 const session = require('express-session')
-
+const cors = require('cors') ;
 // const morgan = require('morgan')
 
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
@@ -15,6 +15,7 @@ const passport  = require('passport');
 const app = express();
 require('./config/passport')
 
+app.use(cors())
 //Settings
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));

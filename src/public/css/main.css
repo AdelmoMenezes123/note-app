@@ -132,7 +132,7 @@ h1 span {
 }
 
 .menu li {
-    padding: 5%;
+    padding: 27px 0;
     transition: all .2s ease-in-out
 }
 
@@ -273,7 +273,7 @@ main {
 .back-2 {
     background-color: var(--background);
     color: var(--title);
-    height: 28vh;
+    height: 240px;
 }
 
 .up-case {
@@ -294,13 +294,17 @@ main {
 
     position: absolute;
     bottom: 2vh;
-    left: 10vh;
+    right: 10px;
+
+    width: 45%;
 }
 
 #edite{
     position: absolute;
     bottom: 2vh;
-    right: 10vh;
+    left: 10px;
+
+    width: 45%;
 }
 
 .d-flex > h4 {
@@ -445,7 +449,7 @@ button,
 }
 
 #items {
-    width: 250px;
+    width: 300px;
     transition: all .8s ease;
 }
 
@@ -459,4 +463,9 @@ button,
     #form {
         width: 100%;
     }
+}
+
+.msg-right{
+    position: absolute;
+    right: 5vw;
 }

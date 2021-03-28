@@ -27,8 +27,6 @@ noteCrlt.renderNote = async (req, res) => {
     const animes = await Note.find({ "categoria": "animes" })
     const animacoes = await Note.find({ "categoria": "animacoes" })
 
-    // const notes = await Note.find()
-
     res.render('notes/all-notes', { hqs, mangas, livros, filmes, series, animes, animacoes });
 }
 

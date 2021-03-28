@@ -3,7 +3,6 @@ const router = Router();
 
 const {renderSignUpForm, renderSignInform, signin,signup, logout} =require('../controller/user.controller')
 
-
 router.get('/users/signup',renderSignUpForm)
 router.post('/users/signup',signup)
 

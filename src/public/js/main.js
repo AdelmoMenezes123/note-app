@@ -21,6 +21,6 @@ $('nav a[href^="#"]').on('click', function (e) {
   );
 });
 
-setTimeout(function() {
+setTimeout(function () {
   $("#msg").hide();
 }, 3000)

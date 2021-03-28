@@ -5,6 +5,7 @@ const MONGODB_URL = /*`mongodb+srv://${NOTE_APP_HOST}:${NOTE_APP_PASSWORD}@clust
 mongoose.connect(MONGODB_URL, {
      useUnifiedTopology: true,
      useNewUrlParser: true,
+     useCreateIndex: true
 }).then(db => console.log('Database está conectado'))
      .catch(err => console.log('Erro DB -> ', err));
 

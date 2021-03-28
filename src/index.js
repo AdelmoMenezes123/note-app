@@ -1,7 +1,7 @@
 require('dotenv').config()
 const app = require('./server');
 require('./database')
-
-app.listen(app.get('port'), () => {
+const port =  process.env.PORT || 3000
+app.listen(port, () => {
      console.log('Servidor rodando na porta: ', app.get('port'))
 })

@@ -10,4 +10,3 @@ const NotSchema = new Schema({
 );
 
 module.exports = model('Note', NotSchema);
-// idUser: { type: mongoose.Types.ObjectId, ref: 'Users' }

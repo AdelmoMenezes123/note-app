@@ -7,11 +7,24 @@
             <form action="/notes/edit/{{note.id}}?_method=PUT" method="POST">
             <input type="hidden" name="_method" value="PUT">
                  <div class="form-floating mb-3">
-                    <input type="text" name="title" maxlength="50" class="form-control" id="floatingInput" value="{{note.title}}" placeholder="Title" required>
+                    <input type="text" name="title" maxlength="41" class="form-control" id="floatingInput" value="{{note.title}}" placeholder="Title" required>
                     <label for="floatingInput">Title</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <textarea name="description" class="form-control textarea" maxlength="67" required>{{note.description}}</textarea>
+                    <select class="form-select" name="categoria" id="floatingSelectGrid" required>
+                        <option value="">Selecione</option>
+                        <option value="hqs" {{{select note.categoria "hqs"}}}>HQ's</option>
+                        <option value="mangas" {{{select note.categoria "mangas"}}}>Mangás</option>
+                        <option value="livros" {{{select note.categoria "livros"}}}>Livros</option>
+                        <option value="filmes" {{{select note.categoria "filmes"}}}>Filmes</option>
+                        <option value="series" {{{select note.categoria "series"}}}>Series</option>
+                        <option value="animes" {{{select note.categoria "animes"}}}>Animes</option>
+                        <option value="animacoes" {{{select note.categoria "animacoes"}}}>Animações</option>
+                    </select>
+                    <label for="floatingSelectGrid">Categorias</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea name="description" class="form-control textarea" maxlength="55" required>{{note.description}}</textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-green btn-block">Save</button>

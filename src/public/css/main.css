@@ -273,7 +273,7 @@ main {
 .back-2 {
     background-color: var(--background);
     color: var(--title);
-    height: 240px;
+    height: 190px;
 }
 
 .up-case {
@@ -449,7 +449,7 @@ button,
 }
 
 #items {
-    width: 300px;
+    width: 290px;
     transition: all .8s ease;
 }
 
